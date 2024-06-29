@@ -46,6 +46,16 @@
                     "name": "systemProgram",
                     "isMut": false,
                     "isSigner": false
+                },
+                {
+                    "name": "eventAuthority",
+                    "isMut": false,
+                    "isSigner": false
+                },
+                {
+                    "name": "program",
+                    "isMut": false,
+                    "isSigner": false
                 }
             ],
             "args": [
@@ -140,6 +150,16 @@
                     "name": "rent",
                     "isMut": false,
                     "isSigner": false
+                },
+                {
+                    "name": "eventAuthority",
+                    "isMut": false,
+                    "isSigner": false
+                },
+                {
+                    "name": "program",
+                    "isMut": false,
+                    "isSigner": false
                 }
             ],
             "args": [
@@ -159,6 +179,9 @@
         },
         {
             "name": "buy",
+            "docs": [
+                "Buys tokens from a bonding curve."
+            ],
             "accounts": [
                 {
                     "name": "global",
@@ -209,6 +232,16 @@
                     "name": "rent",
                     "isMut": false,
                     "isSigner": false
+                },
+                {
+                    "name": "eventAuthority",
+                    "isMut": false,
+                    "isSigner": false
+                },
+                {
+                    "name": "program",
+                    "isMut": false,
+                    "isSigner": false
                 }
             ],
             "args": [
@@ -224,6 +257,9 @@
         },
         {
             "name": "sell",
+            "docs": [
+                "Sells tokens into a bonding curve."
+            ],
             "accounts": [
                 {
                     "name": "global",
@@ -274,6 +310,16 @@
                     "name": "tokenProgram",
                     "isMut": false,
                     "isSigner": false
+                },
+                {
+                    "name": "eventAuthority",
+                    "isMut": false,
+                    "isSigner": false
+                },
+                {
+                    "name": "program",
+                    "isMut": false,
+                    "isSigner": false
                 }
             ],
             "args": [
@@ -289,6 +335,9 @@
         },
         {
             "name": "withdraw",
+            "docs": [
+                "Allows the admin to withdraw liquidity for a migration once the bonding curve completes"
+            ],
             "accounts": [
                 {
                     "name": "global",
@@ -332,6 +381,16 @@
                 },
                 {
                     "name": "rent",
+                    "isMut": false,
+                    "isSigner": false
+                },
+                {
+                    "name": "eventAuthority",
+                    "isMut": false,
+                    "isSigner": false
+                },
+                {
+                    "name": "program",
                     "isMut": false,
                     "isSigner": false
                 }
@@ -450,37 +509,52 @@
             ]
         },
         {
-            "name": "BuyEvent",
+            "name": "TradeEvent",
             "fields": [
+                {
+                    "name": "mint",
+                    "type": "publicKey",
+                    "index": false
+                },
+                {
+                    "name": "solAmount",
+                    "type": "u64",
+                    "index": false
+                },
+                {
+                    "name": "tokenAmount",
+                    "type": "u64",
+                    "index": false
+                },
+                {
+                    "name": "isBuy",
+                    "type": "bool",
+                    "index": false
+                },
                 {
                     "name": "user",
                     "type": "publicKey",
                     "index": false
                 },
                 {
-                    "name": "amount",
+                    "name": "timestamp",
+                    "type": "i64",
+                    "index": false
+                },
+                {
+                    "name": "virtualSolReserves",
                     "type": "u64",
                     "index": false
                 },
                 {
-                    "name": "solCost",
+                    "name": "virtualTokenReserves",
                     "type": "u64",
-                    "index": false
-                },
-                {
-                    "name": "fee",
-                    "type": "u64",
-                    "index": false
-                },
-                {
-                    "name": "complete",
-                    "type": "bool",
                     "index": false
                 }
             ]
         },
         {
-            "name": "SellEvent",
+            "name": "CompleteEvent",
             "fields": [
                 {
                     "name": "user",
@@ -488,17 +562,52 @@
                     "index": false
                 },
                 {
-                    "name": "amount",
+                    "name": "mint",
+                    "type": "publicKey",
+                    "index": false
+                },
+                {
+                    "name": "bondingCurve",
+                    "type": "publicKey",
+                    "index": false
+                },
+                {
+                    "name": "timestamp",
+                    "type": "i64",
+                    "index": false
+                }
+            ]
+        },
+        {
+            "name": "SetParamsEvent",
+            "fields": [
+                {
+                    "name": "feeRecipient",
+                    "type": "publicKey",
+                    "index": false
+                },
+                {
+                    "name": "initialVirtualTokenReserves",
                     "type": "u64",
                     "index": false
                 },
                 {
-                    "name": "solOutput",
+                    "name": "initialVirtualSolReserves",
                     "type": "u64",
                     "index": false
                 },
                 {
-                    "name": "fee",
+                    "name": "initialRealTokenReserves",
+                    "type": "u64",
+                    "index": false
+                },
+                {
+                    "name": "tokenTotalSupply",
+                    "type": "u64",
+                    "index": false
+                },
+                {
+                    "name": "feeBasisPoints",
                     "type": "u64",
                     "index": false
                 }
