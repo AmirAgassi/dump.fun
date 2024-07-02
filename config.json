@@ -1,0 +1,42 @@
+{
+    "chainstack": {
+      "rpcUrl": "https://solana-mainnet.quiknode.pro/",
+      "wsUrl": "wss://mainnet.helius-rpc.com/?api-key="
+    },
+    "solana": {
+      "commitment": "confirmed",
+      "maxSupportedTransactionVersion": 0
+    },
+    "publicKeys": {
+      "pumpProgramId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P",
+      "globalAddress": "4wTV1YmiEkRvAtNtsSGPtUrqRYQMe5SKy2uB4Jjaxnjf",
+      "feeRecipient": "CebN5WGQ4jvEPvsVU4EoHEpgzq1VV7AbicfhtW4xC9iM",
+      "eventAuthority": "Ce6TQqeHC9p8KetsN6JsjHK7UTZk7nasjjnr7XxXp9F1"
+    },
+    "bot": {
+      "liquidityThreshold": 0.1,
+      "amountToBuy": 0.5,
+      "maxSolCost": 0.7,
+      "buyPriorityRate": 400000,
+      "sellPriorityRate": 300000,
+      "lastValidBlockHeightOffset": 2,
+      "totalLatencyThreshold": 1500,
+      "timeToDump": 0,
+      "maxRetries": 5,
+      "retryDelay": 1000,
+      "websiteUrl": "https://pump.fun/"
+    },
+    "transactions": {
+      "computeUnitLimit": 1000000,
+      "minFeeMultiplier": 5
+    },
+    "logging": {
+      "colors": {
+        "timestamp": "green",
+        "signature": "blue",
+        "latency": "magenta",
+        "tokenAddress": "yellow",
+        "separator": "red"
+      }
+    }
+  }
