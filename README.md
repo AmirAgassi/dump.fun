@@ -53,12 +53,6 @@ The dump.fun bot operates through a series of steps:
 8. **Performance Tracking**:
    - The bot keeps track of overall performance, including initial and current balance.
 
-## Key Components
-
-- **WebSocket Listener**: Continuously listens for new transactions on the Solana blockchain.
-- **Transaction Parser**: Analyzes transaction data to identify new token launches.
-- **Smart Contract Interaction**: Interacts with the pump.fun smart contract to buy and sell tokens.
-
 ## Setup and Usage
 
 1. Clone the repository:
