@@ -4,6 +4,10 @@
 
 dump.fun is an advanced, open-source memecoin launch sniping script designed for the Solana blockchain. It uses a reverse-engineered pump.fun program IDL and RPC node support to automate the process of detecting, purchasing, and selling newly launched memecoins on pump.fun.
 
+## Support
+
+If you like this project, please consider supporting it by giving a ⭐️ !
+
 ## Purpose
 
 The primary purpose of this bot is to capitalize on the initial price surge that often happens immediately after a new memecoin is launched on pump.fun. By quickly detecting new token launches, purchasing tokens, and then selling them shortly after, the bot aims to generate profit from these rapid price movements.
@@ -109,7 +113,3 @@ This bot is provided for educational and research purposes only. Trading cryptoc
 ## Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/AmirAgassi/dump.fun/issues) if you want to contribute.
-
-## Support
-
-If you like this project, please consider supporting it by giving a ⭐️ on GitHub!
